@@ -34,6 +34,14 @@
         this.gender = gender;
         this.interests = interests;
       };
+      
+      function Profesor(first, last, age, gender, interests, materia){
+      Person.call(this, first, last, age, gender, interests);
+
+       this.materia = materia;
+        Teacher.prototype = Object.create(Person.prototype);
+      };
+      
 
       Person.prototype.bio = function() {
         // First define a string, and make it equal to the part of
